@@ -8,13 +8,8 @@
 
 /** Data for a user */
 export type User = {
-  /** The email address of the user */
-  email: string
-  /**
-   * The password of the user.
-   *
-   * TODO: You should consider hashing and salting this for security reasons.
-   */
+  authUserId: number
+  username: string
   password: string
 }
 
