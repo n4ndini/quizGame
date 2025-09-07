@@ -5,30 +5,29 @@
 
 // Player
 
-
 // Interfaces
 // Auth
 export interface AuthUserID {
-    authUserID: Number
+    authUserID: number
 }
 
 export interface User {
     user: {
         authUserId: number;
-        name: String
-        username: String
+        name: string
+        username: string
     }
 }
 
 // Quiz
 export interface QuizID {
-    quizId: Number
+    quizId: number
 }
 
-export interface Quiz  {
+export interface Quiz {
     quizId: number;
-    name: String;
-    description: String
+    name: string;
+    description: string
 }
 
 export interface Quizzes {
@@ -37,27 +36,25 @@ export interface Quizzes {
 
 export interface QuizInfo {
     quizId: number;
-    name: String;
-    description: String;
-    timeCreated: Number
+    name: string;
+    description: string;
+    timeCreated: number
 }
 
 // Player
-
-
 
 // Function Returns
 // Auth
 export type UserRegisterReturn = AuthUserID | Error
 export type UserLoginReturn = AuthUserID | Error
 export type UserDetailsReturn = User | Error
-export type UserDetailsUpdateReturn = {} | Error
-export type UserPasswordUpdateReturn = {} | Error
+export type UserDetailsUpdateReturn = object | Error
+export type UserPasswordUpdateReturn = object | Error
 
 // Quiz
 export type QuizListReturn = Quizzes | Error
 export type QuizCreateReturn = QuizID | Error
-export type QuizRemoveReturn = {} | Error
+export type QuizRemoveReturn = object | Error
 export type QuizInfoReturn = QuizInfo | Error
-export type QuizNameUpdateReturn = {} | Error
-export type QuizDescriptionUpdateReturn = {} | Error
+export type QuizNameUpdateReturn = object | Error
+export type QuizDescriptionUpdateReturn = object | Error

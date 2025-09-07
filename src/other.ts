@@ -1,3 +1,3 @@
 export function clear() {
-    return {}
+  return {};
 }
