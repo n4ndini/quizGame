@@ -1,18 +1,18 @@
-import { clear } from "../other"
-import { getData } from "../data";
-import { adminAuthRegister } from "../auth/adminAuthRegister";
+import { clear } from '../other';
+// import { getData } from '../data';
+// import { adminAuthRegister } from '../auth/adminAuthRegister';
 
-describe("Test Suite for clear", () => {
-    test("Case 1: Correct return type", () => {
-        const output = clear()
-        expect(output).toStrictEqual({})
-    });
+describe('Test Suite for clear', () => {
+  test('Case 1: Correct return type', () => {
+    const output = clear();
+    expect(output).toStrictEqual({});
+  });
 
-    // test("Case 2: Correctly clears data", () => {
-    //     adminAuthRegister("username", "password123", "First", "Last")
-    //     clear()
-    //     const data = getData()
-    //     const expected = {users: {}}
-    //     expect(data).toEqual(expected)
-    // });
-})
+  // test("Case 2: Correctly clears data", () => {
+  //     adminAuthRegister("username", "password123", "First", "Last")
+  //     clear()
+  //     const data = getData()
+  //     const expected = {users: {}}
+  //     expect(data).toEqual(expected)
+  // });
+});

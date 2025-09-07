@@ -1,4 +1,4 @@
-import { getData } from "./data";
+import { getData } from './data';
 
 export function clear() {
   const data = getData();
