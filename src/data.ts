@@ -1,11 +1,3 @@
-/**
- * # data.ts
- *
- * Type definitions and data store.
- */
-
-// TODO: Add some proper type definitions to represent your app's data
-
 /** Data for a user */
 export type User = {
   authUserId: number

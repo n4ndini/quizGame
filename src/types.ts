@@ -6,6 +6,10 @@
 // Player
 
 // Interfaces
+// Other
+export interface Errors {
+    error: string
+}
 // Auth
 export interface AuthUserID {
     authUserID: number
@@ -15,6 +19,7 @@ export interface User {
     authUserId: number
     name: string
     username: string
+    password: string
     quizzes: Quiz[]
 }
 
@@ -25,7 +30,7 @@ export interface UDetails {
         username: string;
         quizzes: Quiz[]
       };
-    
+
 }
 
 // Quiz
@@ -64,7 +69,7 @@ export interface QuizInfo {
 
 // Function Returns
 // Auth
-export type UserRegisterReturn = AuthUserID | Error
+export type UserRegisterReturn = AuthUserID | Errors
 export type UserLoginReturn = AuthUserID | Error
 export type UserDetailsReturn = UDetails | Error
 export type UserDetailsUpdateReturn = object | Error
