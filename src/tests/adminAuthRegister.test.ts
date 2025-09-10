@@ -2,9 +2,9 @@ import { adminAuthRegister } from '../auth/adminAuthRegister';
 import { clear } from '../other';
 
 describe('Tests for adminAuthRegister', () => {
-//   beforeEach(() => {
-//     clear();
-//   });
+  beforeEach(() => {
+    clear();
+  });
 
   describe('Error cases: ', () => {
     test('Case 1: nameFirst too short', () => {
@@ -87,7 +87,7 @@ describe('Tests for adminAuthRegister', () => {
   });
 
   describe('Success cases: ', () => {
-    test.only('Case 1: Successfully creates user', () => {
+    test('Case 1: Successfully creates user', () => {
       const output = adminAuthRegister('username', 'password1', 'nameFirst', 'nameLast');
       expect(output).toStrictEqual({ authUserID: expect.any(Number) });
     });
