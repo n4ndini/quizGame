@@ -1,5 +1,17 @@
+import { getData } from '../data';
 import { UserLoginReturn } from '../types';
 
 export function adminAuthLogin(username: string, password: string): UserLoginReturn {
-  return { authUserID: 1 };
+  let data = getData();
+
+  let user = data.users.find(user => user.username == username);
+  if (!user) {
+    return { error: "Username not found"};
+  }
+
+  if (password !== user.password) {
+    return { error: "Password is incorrect" };
+  }
+
+  return { authUserID: user.authUserId };
 }
