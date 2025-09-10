@@ -5,7 +5,9 @@ export function adminUserDetails(authUserID: AuthUserID): UserDetailsReturn {
     user: {
       authUserId: 1,
       name: 'userName',
-      username: 'username'
+      username: 'username',
+      quizzes: []
+
     }
   };
 }

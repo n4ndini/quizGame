@@ -12,16 +12,33 @@ export interface AuthUserID {
 }
 
 export interface User {
+    authUserId: number
+    name: string
+    username: string
+    quizzes: Quiz[]
+}
+
+export interface UDetails {
     user: {
         authUserId: number;
-        name: string
-        username: string
-    }
+        name: string;
+        username: string;
+        quizzes: Quiz[]
+      };
+    
 }
 
 // Quiz
 export interface QuizID {
     quizId: number
+}
+
+export interface QDetails {
+    quiz: {
+        quizId: number,
+        name: string,
+        description: string
+    }
 }
 
 export interface Quiz {
@@ -49,7 +66,7 @@ export interface QuizInfo {
 // Auth
 export type UserRegisterReturn = AuthUserID | Error
 export type UserLoginReturn = AuthUserID | Error
-export type UserDetailsReturn = User | Error
+export type UserDetailsReturn = UDetails | Error
 export type UserDetailsUpdateReturn = object | Error
 export type UserPasswordUpdateReturn = object | Error
 

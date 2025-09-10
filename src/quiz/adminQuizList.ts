@@ -5,8 +5,8 @@ export function adminQuizList(authUserID: AuthUserID): QuizListReturn {
     quizzes: {
       quiz: {
         quizId: 1,
-        name: 'name',
-        description: 'description'
+        name: "name",
+        description: "description"
       }
     }
   };
