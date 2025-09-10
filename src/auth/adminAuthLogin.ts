@@ -2,15 +2,15 @@ import { getData } from '../data';
 import { UserLoginReturn } from '../types';
 
 export function adminAuthLogin(username: string, password: string): UserLoginReturn {
-  let data = getData();
+  const data = getData();
 
-  let user = data.users.find(user => user.username == username);
+  const user = data.users.find(user => user.username === username);
   if (!user) {
-    return { error: "Username not found"};
+    return { error: 'Username not found' };
   }
 
   if (password !== user.password) {
-    return { error: "Password is incorrect" };
+    return { error: 'Password is incorrect' };
   }
 
   return { authUserID: user.authUserId };
