@@ -70,7 +70,7 @@ export interface QuizInfo {
 // Function Returns
 // Auth
 export type UserRegisterReturn = AuthUserID | Errors
-export type UserLoginReturn = AuthUserID | Error
+export type UserLoginReturn = AuthUserID | Errors
 export type UserDetailsReturn = UDetails | Error
 export type UserDetailsUpdateReturn = object | Error
 export type UserPasswordUpdateReturn = object | Error
