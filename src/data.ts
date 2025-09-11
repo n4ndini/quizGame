@@ -1,4 +1,4 @@
-import { User } from "./types";
+import { User } from './types';
 
 /** The overall data for the app */
 export type Data = {

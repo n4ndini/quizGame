@@ -6,7 +6,7 @@ export function adminUserDetails(authUserID: AuthUserID): UserDetailsReturn {
   const user = data.users.find(u => u.authUserId === authUserID.authUserId);
 
   if (!user) {
-    return { error: "User not found" };
+    return { error: 'User not found' };
   }
 
   return {
