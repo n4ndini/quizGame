@@ -1,9 +1,4 @@
-/** Data for a user */
-export type User = {
-  authUserId: number
-  username: string
-  password: string
-}
+import { User } from './types';
 
 /** The overall data for the app */
 export type Data = {

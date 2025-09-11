@@ -28,7 +28,7 @@ describe('Tests for adminAuthLogin', () => {
     test('Case 1: Successful login', () => {
       const output = adminAuthLogin('username', 'password1');
       expect(output).toStrictEqual({
-        authUserID: expect.any(Number)
+        authUserId: expect.any(Number)
       });
     });
   });

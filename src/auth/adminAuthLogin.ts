@@ -13,5 +13,5 @@ export function adminAuthLogin(username: string, password: string): UserLoginRet
     return { error: 'Password is incorrect' };
   }
 
-  return { authUserID: user.authUserId };
+  return { authUserId: user.authUserId };
 }
