@@ -2,6 +2,7 @@ import { adminUserDetails } from "../auth/adminUserDetails";
 import { adminAuthRegister } from "../auth/adminAuthRegister";
 import { clear } from "../other"
 import { adminAuthLogin } from "../auth/adminAuthLogin";
+import { log } from "console";
 
 describe("Tests for adminUserDetails", () => {
     beforeEach(() =>  {
@@ -10,8 +11,7 @@ describe("Tests for adminUserDetails", () => {
     });
     describe("Error Cases", () => {
         test("Case 1: authUserId does not exist", () => {
-            let authUserID = -1;
-            const output = adminUserDetails(authUserID);
+            const output = adminUserDetails({authUserId: -1});
             expect(output).toStrictEqual({
                 error: expect.any(String)
             });
@@ -20,8 +20,21 @@ describe("Tests for adminUserDetails", () => {
 
     describe("Success Cases", () => {
         test("Case 1: Successfully retrieves user details", () => {
-            const id = adminAuthLogin("username", "password1");
-            const output = adminUserDetails(id);
+            const login = adminAuthLogin("username", "password1");
+            if ("error" in login) {
+              throw new Error(`Login failed in setup: ${login.error}`);
+            }
+
+            const output = adminUserDetails(login);
+
+            expect(output).toStrictEqual({
+                user: {
+                    authUserId: login.authUserId,
+                    name: expect.any(String),
+                    username: expect.any(String),
+                    quizzes: [],
+                }
+            })
         });
     });
 });

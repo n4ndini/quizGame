@@ -12,7 +12,7 @@ export interface Errors {
 }
 // Auth
 export interface AuthUserID {
-    authUserID: number
+    authUserId: number
 }
 
 export interface User {
@@ -71,7 +71,7 @@ export interface QuizInfo {
 // Auth
 export type UserRegisterReturn = AuthUserID | Errors
 export type UserLoginReturn = AuthUserID | Errors
-export type UserDetailsReturn = UDetails | Error
+export type UserDetailsReturn = UDetails | Errors
 export type UserDetailsUpdateReturn = object | Error
 export type UserPasswordUpdateReturn = object | Error
 

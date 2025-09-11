@@ -27,12 +27,12 @@ export function adminAuthRegister(username: string, password: string, nameFirst:
     name: `${nameFirst} ${nameLast}`,
     username: `${username}`,
     password: `${password}`,
-    quizzes: []
+    quizzes: [],
   };
 
   data.users.push(user);
 
   setData(data);
 
-  return { authUserID: authUserId };
+  return { authUserId: authUserId };
 }

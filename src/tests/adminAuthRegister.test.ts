@@ -89,7 +89,7 @@ describe('Tests for adminAuthRegister', () => {
   describe('Success cases: ', () => {
     test('Case 1: Successfully creates user', () => {
       const output = adminAuthRegister('username', 'password1', 'nameFirst', 'nameLast');
-      expect(output).toStrictEqual({ authUserID: expect.any(Number) });
+      expect(output).toStrictEqual({ authUserId: expect.any(Number) });
     });
   });
 });
